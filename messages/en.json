@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "tRPC i18n error showcase",
+    "description": "This is a showcase of how to use i18n with tRPC errors"
+  },
+  "i18n": {
+    "en": "English",
+    "de": "German"
+  },
+  "posts": {
+    "mostRecentPost": "Your most recent post: {name}",
+    "noPosts": "You have no posts yet",
+    "submit": "Submit",
+    "submitting": "Submitting..."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "tRPC i18n error Beispiel",
+    "description": "Dies ist ein Beispiel für die Verwendung von i18n in tRPC Fehlermeldungen"
+  },
+  "i18n": {
+    "en": "Englisch",
+    "de": "Deutsch"
+  },
+  "posts": {
+    "mostRecentPost": "Dein letzter Post: {name}",
+    "noPosts": "Du hast noch keine Posts",
+    "submit": "Absenden",
+    "submitting": "Wird gesendet..."
+  }
+}

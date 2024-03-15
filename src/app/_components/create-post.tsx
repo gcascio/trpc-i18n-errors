@@ -1,44 +1,17 @@
-"use client";
-
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-
-import { api } from "~/trpc/react";
-import styles from "../index.module.css";
-
+import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { ClientCreatePost } from './client-create-post';
+ 
 export function CreatePost() {
-  const router = useRouter();
-  const [name, setName] = useState("");
-
-  const createPost = api.post.create.useMutation({
-    onSuccess: () => {
-      router.refresh();
-      setName("");
-    },
-  });
-
+  // Receive messages provided in `i18n.ts` …
+  const messages = useMessages();
+ 
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        createPost.mutate({ name });
-      }}
-      className={styles.form}
+    <NextIntlClientProvider
+      messages={
+        { posts: messages.posts! }
+      }
     >
-      <input
-        type="text"
-        placeholder="Title"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        className={styles.input}
-      />
-      <button
-        type="submit"
-        className={styles.submitButton}
-        disabled={createPost.isPending}
-      >
-        {createPost.isPending ? "Submitting..." : "Submit"}
-      </button>
-    </form>
+      <ClientCreatePost />
+    </NextIntlClientProvider>
   );
 }
