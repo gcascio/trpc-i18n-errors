@@ -11,6 +11,11 @@
     "mostRecentPost": "Dein letzter Post: {name}",
     "noPosts": "Du hast noch keine Posts",
     "submit": "Absenden",
-    "submitting": "Wird gesendet..."
+    "submitting": "Wird gesendet...",
+    "postAlreadyExistsError": "Ein Post mit dem Namen existiert bereits",
+    "tryErrorHint": "Versuche, zwei Posts mit demselben Titel zu erstellen, um die Fehlermeldung zu sehen"
+  },
+  "error": {
+    "generic": "Ein Fehler ist aufgetreten"
   }
 }

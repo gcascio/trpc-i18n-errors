@@ -9,6 +9,7 @@
 import { initTRPC } from "@trpc/server";
 import superjson from "superjson";
 import { ZodError } from "zod";
+import { I18nTRPCError } from "../errors";
 
 /**
  * 1. CONTEXT
@@ -42,6 +43,8 @@ const t = initTRPC.context<typeof createTRPCContext>().create({
       ...shape,
       data: {
         ...shape.data,
+        i18nKey: error instanceof I18nTRPCError ? error.i18nKey : null,
+        formField: error instanceof I18nTRPCError ? error.formField : null,
         zodError:
           error.cause instanceof ZodError ? error.cause.flatten() : null,
       },

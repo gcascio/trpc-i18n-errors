@@ -11,6 +11,11 @@
     "mostRecentPost": "Your most recent post: {name}",
     "noPosts": "You have no posts yet",
     "submit": "Submit",
-    "submitting": "Submitting..."
+    "submitting": "Submitting...",
+    "postAlreadyExistsError": "A post with the name already exists",
+    "tryErrorHint": "Try to create two posts with the same title to see the error message"
+  },
+  "error": {
+    "generic": "An error occurred"
   }
 }

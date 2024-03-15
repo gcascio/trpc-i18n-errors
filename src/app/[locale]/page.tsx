@@ -13,7 +13,6 @@ export default async function Home() {
         <h1 className={styles.title}>
           {t('title')}
         </h1>
-
         <CrudShowcase />
       </div>
     </main>
@@ -34,6 +33,10 @@ async function CrudShowcase() {
       ) : (
         <p className={styles.showcaseText}>{tPosts('noPosts')}</p>
       )}
+
+      <p className={styles.hintText}>
+        {tPosts('tryErrorHint')}
+      </p>
 
       <CreatePost />
 

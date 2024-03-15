@@ -180,3 +180,14 @@
   color: white;
   margin-top: 1rem;
 }
+
+.formError {
+  height: 1rem;
+  margin-bottom: 0.5rem;
+  color: red;
+}
+
+.hintText {
+  color: white;
+  opacity: 0.6;
+}
